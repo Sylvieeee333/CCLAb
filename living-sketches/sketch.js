@@ -28,7 +28,7 @@ function draw() {
   image(scannedImages[0], 0, 0);
 
   // show the cropped image
-  image(croppedImages[0], 0, 0, 400, 300);
+  image(croppedImages[0], 0, 0, 40, 30);
 
   // display the mouse position
   push();

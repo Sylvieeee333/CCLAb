@@ -33,10 +33,10 @@ async function setup() {
 
   // crop parts of images
   // how to use: crop(imageArray, x, y, width, height);
-  eyes = crop(scannedImages, 0, 0, 585, 356);
+  eyes = crop(scannedImages, 0, 0, 585, 430);
   rockets = crop(scannedImages, 1600, 90, 650, 420);
-  doodleYellow = crop(scannedImages, 1514, 1300, 830, 300);
-  doodleCyan = crop(scannedImages, 100, 1300, 366, 311);
+  doodleYellow = crop(scannedImages, 1514, 1100, 830, 600);
+  doodleCyan = crop(scannedImages, 150, 1000, 1200, 600);
 }
 
 function draw() {
@@ -85,7 +85,7 @@ function draw() {
   image(
     doodleYellow[currentDoodleYellowIndex],
     0,
-    0,
+    100,
     doodleYellow[0].width * 0.5,
     doodleYellow[0].height * 0.5
   );
@@ -100,7 +100,7 @@ function draw() {
   image(
     doodleCyan[currentDoodleCyanIndex],
     400,
-    300,
+    200,
     doodleCyan[0].width * 0.5,
     doodleCyan[0].height * 0.5
   );
