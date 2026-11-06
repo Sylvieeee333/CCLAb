@@ -55,15 +55,15 @@ class Lammie {
  this.frame++;
 
     // Body movement
-    this.bodyAngle = sin(this.frame * 0.08) * 0.12;
-    this.y = this.baseY + sin(this.frame * 0.12) * 4;
+    this.bodyAngle = sin(this.frame * 0.08) * 0.12
+    this.y = this.baseY + sin(this.frame * 0.12) * 4
 
     // Head movement
-    this.headAngle = sin(this.frame * 0.1) * 0.1;
+    this.headAngle = sin(this.frame * 0.08) * 0.12
 
     // Arms waving
-    this.leftArmAngle = sin(this.frame * 0.12) * 0.6;
-    this.rightArmAngle = sin(this.frame * 0.12 + PI) * 0.6;
+    this.leftArmAngle = sin(this.frame * 0.12) * 0.6
+    this.rightArmAngle = sin(this.frame * 0.12 + PI) * 0.6
 
     // Feet stepping
     this.leftLegAngle = sin(this.frame * 0.12) * 0.1;
@@ -105,14 +105,14 @@ class Lammie {
     translate(28, -15);
     rotate(this.leftArmAngle - 0.5);
     fill(this.bodyColor);
-    ellipse(0, 8, 10, 20);
+    ellipse(0, 7, 10, 20);
     pop();
 
     push();
     translate(-28, -15);
     rotate(this.rightArmAngle + 0.5);
     fill(this.bodyColor);
-    ellipse(0, 8, 10, 20);
+    ellipse(0, 7, 10, 20);
     pop();
     // Body
     fill(this.bodyColor);
@@ -156,8 +156,8 @@ class Lammie {
     //line(-5, 0, 5, 0);
     //line(0, -5, 0, 5);
     stroke(255);
-    //rect(-100, -100, 200, 200);
-    //fill(255);
+    rect(width / 2+300, height / 2+300, 200, 200);
+    fill(255);
     stroke(0);
   }
 }
