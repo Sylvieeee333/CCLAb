@@ -17,7 +17,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
 
   // ...except to adjust the dancer's name on the next line:
-  dancer = new Lammie(width / 2, height / 2);
+  dancer = new Lammie(width / 2+300, height / 2+300);
 }
 
 function draw() {
@@ -153,11 +153,11 @@ class Lammie {
   drawReferenceShapes() {
     noFill();
     stroke(255, 0, 0);
-    line(-5, 0, 5, 0);
-    line(0, -5, 0, 5);
+    //line(-5, 0, 5, 0);
+    //line(0, -5, 0, 5);
     stroke(255);
-    rect(-100, -100, 200, 200);
-    fill(255);
+    //rect(-100, -100, 200, 200);
+    //fill(255);
     stroke(0);
   }
 }

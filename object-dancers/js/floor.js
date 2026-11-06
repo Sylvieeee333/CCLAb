@@ -11,7 +11,7 @@ function drawFloor() {
   let dy = 5;
   let y = height * 0.6;
   while (y <= height) {
-    line(0, y, width, y);
+   line(0, y, width, y);
     dy *= 1.05;
     y += dy;
   }
