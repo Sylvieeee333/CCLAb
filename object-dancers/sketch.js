@@ -39,7 +39,7 @@ class Lammie {
     //..
     //..
     //..
-     this.baseY = startY;
+    this.baseY = startY;
     this.frame = 0;
     this.bodyAngle = 0;
     this.headAngle = 0;
@@ -52,24 +52,21 @@ class Lammie {
   update() {
     // update properties here to achieve
     // your dancer's desired moves and behaviour
- this.frame++;
-
-    // Body movement
+    this.frame++;
+    // Body 
     this.bodyAngle = sin(this.frame * 0.08) * 0.12
     this.y = this.baseY + sin(this.frame * 0.12) * 4
 
-    // Head movement
+    // Head 
     this.headAngle = sin(this.frame * 0.08) * 0.12
 
-    // Arms waving
+    // Arms 
     this.leftArmAngle = sin(this.frame * 0.12) * 0.6
     this.rightArmAngle = sin(this.frame * 0.12 + PI) * 0.6
 
-    // Feet stepping
-    this.leftLegAngle = sin(this.frame * 0.12) * 0.1;
-    this.rightLegAngle = sin(this.frame * 0.12 + PI) * 0.1;
-
-
+    // Feet 
+    this.leftLegAngle = sin(this.frame * 0.12) * 0.1
+    this.rightLegAngle = sin(this.frame * 0.12 + PI) * 0.1
   }
   display() {
     // the push and pop, along with the translate 
@@ -88,53 +85,53 @@ class Lammie {
     ellipse(25, -80, 15,20);
     // Legs
     push();
-    translate(-20, 55);
+    translate(-20, 55)
     rotate(this.leftLegAngle);
     fill(this.bodyColor);
     ellipse(0, -30, 10, 20);
     pop();
 
     push();
-    translate(20, 55);
+    translate(20, 55)
     rotate(this.rightLegAngle);
     fill(this.bodyColor);
     ellipse(0, -30, 10, 20);
     pop();
     // Arms
     push();
-    translate(28, -15);
+    translate(28, -15)
     rotate(this.leftArmAngle - 0.5);
     fill(this.bodyColor);
-    ellipse(0, 7, 10, 20);
+    ellipse(0, 7, 10, 20)
     pop();
 
     push();
-    translate(-28, -15);
-    rotate(this.rightArmAngle + 0.5);
-    fill(this.bodyColor);
-    ellipse(0, 7, 10, 20);
+    translate(-28, -15)
+    rotate(this.rightArmAngle + 0.5)
+    fill(this.bodyColor)
+    ellipse(0, 7, 10, 20)
     pop();
     // Body
-    fill(this.bodyColor);
-    ellipse(0, 0, 65, 60);
+    fill(this.bodyColor)
+    ellipse(0, 0, 65, 60)
     // Head
     push();
-    translate(0, -48);
-    rotate(this.headAngle);
+    translate(0, -48)
+    rotate(this.headAngle)
 
-    fill(this.bodyColor);
-    ellipse(0, 0, 90, 80);
+    fill(this.bodyColor)
+    ellipse(0, 0, 90, 80)
     // Eyes
-    fill("black");
-    circle(-10, -5, 6);
-    circle(10, -5, 6);
+    fill("black")
+    circle(-10, -5, 6)
+    circle(10, -5, 6)
     // Nose
-    fill("black");
-    ellipse(0, 8, 7, 6);
+    fill("black")
+    ellipse(0, 8, 7, 6)
     // Mouth
-    noFill();
-    stroke("black");
-    strokeWeight(3);
+    noFill()
+    stroke("black")
+    strokeWeight(3)
     arc(-3, 12, 6, 6, 0, PI);
     arc(3, 12, 6, 6, 0, PI);
     // ⬆️ draw your dancer above ⬆️
